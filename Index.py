@@ -43,4 +43,4 @@ if submitted:
     input_array=np.array(input).reshape(1,-1)
     pred = loaded_model.predict(xgb.DMatrix(input_array))
     pred[pred<0]=0
-    st.write("predicted=",pred[0],"%")
+    st.write("Max probability of having a cloudburst=",pred[0],"%")
